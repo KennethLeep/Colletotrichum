@@ -1,1 +1,1 @@
-this is a sample file
+This is a placeholder file to create the directory and can be safely deleted once you've cloned the git.

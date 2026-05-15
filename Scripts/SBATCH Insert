@@ -1,0 +1,11 @@
+#SBATCH --job-name="session"
+#SBATCH -p ceres
+#SBATCH -N 1
+#SBATCH -n 40
+#SBATCH --mem=256GB
+#SBATCH -t 12:00:00
+#SBATCH --mail-user=kenneth.leep@usda.gov
+#SBATCH --mail-type=BEGIN,END,FAIL
+#SBATCH -A colletotrichum_ga_625
+#SBATCH -o "/project/colletotrichum_ga_625/troubleshooting/<session>.stdout.log"
+#SBATCH -e "/project/colletotrichum_ga_625/troubleshooting/<session>.stderr.log"

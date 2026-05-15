@@ -60,12 +60,3 @@ P2.Fun2Clean.sh			funannotate2_env
 P3.UnparsedTree.sh		mashtree_env
 P4.TreeParser.sh		-
 P5.ParsedTree.sh		mashtree_env
-
-CIRCOS Stuff:
-confirmed use			bedtools_env
-				mummer_env
-				circos_env
-				graphviz_env
-
-VITIS project stuff:
-5-4.Star.sh			star_env

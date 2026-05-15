@@ -21,13 +21,13 @@ This pipeline was built with both Illumina and PacBio sequencing to be performed
 *****************
 
 Step One
-	Clone this pipeline from the github into a project directory of your choosing. This directory must have a minimum of 1TB (preferably 2TB) of available space to hold everything needed for the pipeline. This will include multiple copies of your genome files, as they move about the various steps. The folder where you copied the git will be considered BASE_DIR going forward. The name you gave the project when you cloned the github will be the PROJECT_DIR. You need only run the first_time_setup.sh script, located in the Scripts directory, once for multiple uses of the pipeline. You can always re-clone the pipeline into a new project name for future runs.
+	Clone this pipeline from the github into a project directory of your choosing. This directory must have a minimum of 1TB (preferably 2TB) of available space to hold everything needed for the pipeline. This will include multiple copies of your genome files, as they move about the various steps. The folder where you copied the git will be considered BASE_DIR going forward. Locate the cloned Scripts folder, and use either the config.sh (reviewers) or config.template (future users) to configure the pipeline. Instructions are within the template for how to edit it. You can always re-clone the pipeline into a new project name for future runs.
 
 Step Two
-	Manually place your raw sequencing files (Illumina sequences in in .fq.gz or .fastq.gz format, PacBio sequences in .bam format) into the RawSequences folder in the PROJECT_DIR. Edit the config.sh file, in the Scripts folder, with your specific information. You MUST edit the config.sh for other scripts to run properly. See the instructions in that file for configuration requirements.
+	Run the scripts 0-0.ReferenceRetriever.sh and 0-1.RawFilePrep.sh before any other step, but after having configured your config.sh. If you do not provide a list of references and isolates to the config.sh file, these first two scripts will fail to execute. Note that all isolates must have unique names with no spaces; this includes if you have two versions of the same isolate, be sure to give them unique names.
 
 Step Three
-	Run the scripts 0-0.ReferenceRetriever.sh and 0-1.RawFilePrep.sh before any other step, but after having configured your config.sh. If you do not provide a list of references and isolates to the config.sh file, these first two scripts will fail to execute. Note that all isolates must have unique names with no spaces; this includes if you have two versions of the same isolate, be sure to give them unique names.
+    Install the various conda packages using the environment.yml files in the Environments folder. Some of the software will require configuration, database downloads, or a license to use. If you are a reviewer who doesn't intend to actually run but only review the pipeline, you will not need to do any of this. However, any future user running the pipeline on their own data will need to follow the instructions from each piece of software to download their respective databases, and configurations.
 
 ******************
 * ASSEMBLY STEPS *

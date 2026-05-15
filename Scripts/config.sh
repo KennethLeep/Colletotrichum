@@ -1,6 +1,8 @@
 #!/bin/bash
 export PIPEVER=0.8.0.F
 
+# This default config.sh file is intended for manuscript reviewers to use without needing to edit any entry. If you are running this pipeline for your own uses, please use the config.template instead.
+
 ##################
 # BASE FUNCTIONS #
 ##################

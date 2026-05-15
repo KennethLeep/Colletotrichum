@@ -1,0 +1,8 @@
+name: ncbidata_env
+channels:
+  - bioconda
+  - conda-forge
+  - defaults
+dependencies:
+  - ca-certificates=2026.2.25
+  - ncbi-datasets-cli=18.22.1

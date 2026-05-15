@@ -1,0 +1,71 @@
+Script				env(s) called
+0-0.ReferenceRetriever.sh	ncbidata_env
+0-1.RawFilePrep.sh		cleanup_env
+1-0.KrakenSetup.sh		-
+1-1.KrakenPrelim.sh		kraken2_env
+1-2.KrakenCleans.sh		-
+2-0.Spades.sh			spades_env
+2-1.Quast_Spades.sh		quast_env
+2-2.BUSCO_Spades.sh		busco_env
+3-0.Pilon.sh			pilon_env
+3-1.Quast_Pilon.sh		quast_env
+3-2.BUSCO_Pilon.sh		busco_env
+4-0.Assembly_fix.sh		cleanup_env
+4-1.Quast_CLC.sh		quast_env
+4-2.BUSCO_CLC.sh		busco_env
+5-0.HiFiASM.sh			hifiasm_env
+NO SCRIPT			bandage_env
+5-1.FileRelocator.sh		-
+5-2.AssemblyChar.sh		cleanup_env
+5-3.SeqKit.sh			cleanup_env
+5-4.TIDK.sh			cleanup_env
+6-0.ThisSpaceLeftEmpty		-
+7-0.Fun2Clean.sh		funannotate2_env
+7-1.Quast_Clean.sh		quast_env
+7-2.Busco_Clean.sh		busco_env
+8-0.Clean_Proteome.sh		cleanup_env
+8-1.Clean_Sources.sh		cleanup_env
+8-2.EDTA.sh			edta_env
+8-3.RepeatMasker.sh		edta_env
+8-4.BUSCO_masked.sh		busco_env
+8-5.Quast_masked.sh		quast_env
+9-0.tRNAscan-SE.sh		trna_env
+9-1.Infernal.sh			infernal_env
+9-2.PyBarrnap.sh		pybarrnap_env
+9-3.rDNAClusterRemover.sh	cleanup_env
+10-0.Fun2Train.sh		funannotate2_env
+10-1.Fun2Predict.sh		funannotate2_env
+11-0.gFACs.sh			gfacs_env
+11-1.gFACsFixer.sh		gt_env, cleanup_env
+12-0.antiSMASH.sh		funannotate2_env
+12-1.eggNOG_mapper.sh		eggnog_env
+12-2.InterProScan.sh		funannotate2_env
+12-3.SignalP.sh			signalp_env
+13-0.F2A.sh			funannotate2_env
+13-1.Fun2Annotate.sh		funannotate2_env
+
+X-0.BamMaker.sh			btk_env
+X-1.BamNumbers.sh		btk_env
+X-2.BlobTools.sh		btk_env
+X-3.BlobExcluder.sh		btk_env
+X-4.ReadsExtractor.sh		pilon_env
+X-5.Spades14.sh			spades_env
+X-6.Pilon14.sh			pilon_env
+X-7.Fun2Clean14.sh		funannotate2_env
+X-8.Quast_14.sh			quast_env
+X-9.Busco_14.sh			busco_env
+
+P1.FileCopier.sh		ncbidata_env
+P2.Fun2Clean.sh			funannotate2_env
+P3.UnparsedTree.sh		mashtree_env
+P4.TreeParser.sh		-
+P5.ParsedTree.sh		mashtree_env
+
+CIRCOS Stuff:
+confirmed use			bedtools_env
+				mummer_env
+				circos_env
+				graphviz_env
+
+VITIS project stuff:
+5-4.Star.sh			star_env

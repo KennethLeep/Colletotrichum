@@ -10,7 +10,7 @@ export PIPEVER=0.8.0.F
 CORES=${SLURM_CPUS_PER_TASK:-${SLURM_JOB_CPUS_PER_NODE%%\(*} }; CORES=${CORES//[[:space:]]/}; CORES=${CORES:-$(nproc 2>/dev/null || echo 1)}
 export SCRIPTS=$(cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
-export BASE_DIR="/project/colletotrichum_ga_625"
+export BASE_DIR=$(dirname "$SCRIPTS")
 export PROJECT_DIR="$BASE_DIR/COLLETOTRICHUM"
 
 ###############################
